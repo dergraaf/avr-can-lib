@@ -125,7 +125,7 @@ uint8_t mcp2515_read_status(uint8_t type)
 
 // -------------------------------------------------------------------------
 
-prog_uint8_t _mcp2515_cnf[8][3] = {
+const prog_uint8_t _mcp2515_cnf[8][3] = {
 	// 10 kbps
 	{	0x04,
 		0xb6,
