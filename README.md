@@ -94,31 +94,31 @@ Testprogram
 Ein Program was einfach eine Nachricht per CAN verschickt könnte folgendermaßen
 aussehen:
 
-int main(void)
-{
-	// initialisieren des MCP2515
-	can_init(BITRATE_125_KBPS);
+	int main(void)
+	{
+		// initialisieren des MCP2515
+		can_init(BITRATE_125_KBPS);
 	
-	// erzeuge eine Testnachricht
-	can_t msg;
+		// erzeuge eine Testnachricht
+		can_t msg;
 	
-	msg.id = 0x123456;
-	msg.flags.rtr = 0;
-	msg.flags.extended = 1;
+		msg.id = 0x123456;
+		msg.flags.rtr = 0;
+		msg.flags.extended = 1;
+		
+		msg.length = 4;
+		msg.data[0] = 0xde;
+		msg.data[1] = 0xad;
+		msg.data[2] = 0xbe;
+		msg.data[3] = 0xef;
+		
+		// Nachricht verschicken
+		can_send_message(&msg);
 	
-	msg.length = 4;
-	msg.data[0] = 0xde;
-	msg.data[1] = 0xad;
-	msg.data[2] = 0xbe;
-	msg.data[3] = 0xef;
-	
-	// Nachricht verschicken
-	can_send_message(&msg);
-	
-	while (1) {
-        
+		while (1) {
+   	     
+		}
 	}
-}
 
 
 Lizenz
