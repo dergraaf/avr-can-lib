@@ -389,7 +389,7 @@ can_disable_filter(uint8_t number);
  * \warning	Wird nur vom MCP2515 unterstuetzt.
  */
 extern void
-can_static_filter(const prog_uint8_t *filter_array);
+can_static_filter(const uint8_t *filter_array);
 
 // ----------------------------------------------------------------------------
 /**
