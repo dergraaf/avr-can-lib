@@ -34,7 +34,7 @@
 // ----------------------------------------------------------------------------
 // Filter setzen
 
-void mcp2515_static_filter(const prog_uint8_t *filter)
+void mcp2515_static_filter(const uint8_t *filter)
 {
 	// change to configuration mode
 	mcp2515_bit_modify(CANCTRL, 0xe0, (1<<REQOP2));
