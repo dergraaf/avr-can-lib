@@ -303,7 +303,7 @@ static inline uint8_t swap (uint8_t x)
  */
 #if defined(DEBUG_LEVEL) && DEBUG_LEVEL
 	#include <stdio.h>
-	#define	DEBUG_PRINT(s, ...)	do { static prog_char __s[] = (s); \
+	#define	DEBUG_PRINT(s, ...)	do { static const char __s[] PROGMEM = (s); \
 				printf_P(__s, ## __VA_ARGS__); } while (0)
 #else
 	#define	DEBUG_PRINT(s, ...)

@@ -74,7 +74,7 @@ uint8_t sja1000_read(uint8_t address)
 // ----------------------------------------------------------------------------
 // useable can-bitrates (for calculation see http://www.kvaser.com/index.htm)
 
-prog_char _sja1000_cnf[8][2] = {
+const uint8_t _sja1000_cnf[8][2] PROGMEM = {
 	// 10 kbps
 	{	0xe7,
 		0x4d

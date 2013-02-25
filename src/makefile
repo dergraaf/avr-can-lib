@@ -41,8 +41,8 @@
 
 
 # MCU name
-MCU = atmega32
-
+#MCU = atmega32
+MCU = at90can128
 
 # Processor frequency.
 #     This will define a symbol, F_CPU, in all source code files equal to the 
@@ -62,7 +62,8 @@ MCU = atmega32
 #         F_CPU = 16000000
 #         F_CPU = 18432000
 #         F_CPU = 20000000
-F_CPU = 14745600
+#F_CPU = 14745600
+F_CPU = 16000000
 
 
 # Output format. (can be srec, ihex, binary)
@@ -630,6 +631,7 @@ clean_list :
 	$(REMOVE) $(TARGET).map
 	$(REMOVE) $(TARGET).sym
 	$(REMOVE) $(TARGET).lss
+	$(REMOVE) lib$(TARGET).a
 	$(REMOVE) $(SRC:%.c=$(OBJDIR)/%.o)
 	$(REMOVE) $(SRC:%.c=$(OBJDIR)/%.lst)
 	$(REMOVE) $(SRC:.c=.s)
