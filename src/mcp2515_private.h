@@ -61,6 +61,11 @@
 		#define	P_MISO	B,6
 		#define	P_SCK	B,7
 		#define	SUPPORT_FOR_MCP2515__
+	#elif defined(__AVR_AT90USB82__) || defined(__AVR_AT90USB162__)
+		#define P_MOSI  B,2
+		#define P_MISO  B,3
+		#define P_SCK   B,1
+		#define SUPPORT_FOR_MCP2515__
 	#elif defined(__AVR_ATmega8__)  || defined(__AVR_ATmega48__) || \
 		  defined(__AVR_ATmega88__) || defined(__AVR_ATmega168__)
 		#define	P_MOSI	B,3

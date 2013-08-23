@@ -169,7 +169,7 @@ const uint8_t _mcp2515_cnf[8][3] PROGMEM = {
 };
 
 // -------------------------------------------------------------------------
-bool mcp2515_init(uint8_t bitrate)
+bool mcp2515_init(can_bitrate_t bitrate)
 {
 	if (bitrate >= 8)
 		return false;
