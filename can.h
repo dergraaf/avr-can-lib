@@ -58,7 +58,15 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+#ifndef CAN_CONFIG_LOADED
+#ifdef HAS_CAN_CONFIG_H
+/* try to load can_config.h */
+#include "can_config.h"
+#else
+/* try to load config.h - compatibility */
 #include "config.h"
+#endif
+#endif
 
 // ----------------------------------------------------------------------------
 /** \ingroup	can_interface
