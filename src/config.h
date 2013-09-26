@@ -1,6 +1,8 @@
 #ifndef	CONFIG_H
 #define	CONFIG_H
 
+#warning Default config.h used!
+#define CAN_CONFIG_LOADED
 // -----------------------------------------------------------------------------
 /* Global settings for building the can-lib and application program.
  *
