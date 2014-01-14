@@ -67,7 +67,7 @@
 		#define P_SCK   B,1
 		#define SUPPORT_FOR_MCP2515__
 	#elif defined(__AVR_ATmega8__)  || defined(__AVR_ATmega48__) || \
-		  defined(__AVR_ATmega88__) || defined(__AVR_ATmega168__)
+		  defined(__AVR_ATmega88__) || defined(__AVR_ATmega168__) || defined(__AVR_ATmega328P__)
 		#define	P_MOSI	B,3
 		#define	P_MISO	B,4
 		#define	P_SCK	B,5
