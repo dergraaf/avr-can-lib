@@ -1,8 +1,9 @@
 #ifndef	CONFIG_H
 #define	CONFIG_H
 
-#warning Default config.h used!
+#warning "Default config.h used!"
 #define CAN_CONFIG_LOADED
+
 // -----------------------------------------------------------------------------
 /* Global settings for building the can-lib and application program.
  *
@@ -65,5 +66,15 @@
 #define	SJA1000_CS				C,0
 #define	SJA1000_DATA			A
 */
+
+// -----------------------------------------------------------------------------
+// Setting for AT90CAN
+
+// Number of CAN messages which are buffered in RAM additinally to the MObs
+#define CAN_RX_BUFFER_SIZE		16
+#define CAN_TX_BUFFER_SIZE		8
+
+// only available if CAN_TX_BUFFER_SIZE > 0
+#define CAN_FORCE_TX_ORDER		1
 
 #endif	// CONFIG_H

@@ -110,7 +110,7 @@ uint8_t at90can_send_message(const can_t *msg)
 	ENTER_CRITICAL_SECTION;
 	#if CAN_TX_BUFFER_SIZE == 0
 		_free_buffer--;
-	#else
+	#elif CAN_FORCE_TX_ORDER
 		_transmission_in_progress = 1;
 	#endif
 	LEAVE_CRITICAL_SECTION;
