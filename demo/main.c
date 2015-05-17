@@ -18,7 +18,7 @@
  * If you want to receive ONLY 11 bit identifiers, set your filters
  * and masks as follows:
  *
- *	prog_uint8_t can_filter[] = {
+ *	uint8_t can_filter[] PROGMEM = {
  *		// Group 0
  *		MCP2515_FILTER(0),				// Filter 0
  *		MCP2515_FILTER(0),				// Filter 1
@@ -38,7 +38,7 @@
  * and masks as follows:
  *
  * \code
- *	prog_uint8_t can_filter[] = {
+ *	uint8_t can_filter[] PROGMEM = {
  *		// Group 0
  *		MCP2515_FILTER_EXTENDED(0),		// Filter 0
  *		MCP2515_FILTER_EXTENDED(0),		// Filter 1
@@ -57,7 +57,7 @@
  * If you want to receive both 11 and 29 bit identifiers, set your filters
  * and masks as follows:
  */
-const prog_uint8_t can_filter[] = 
+const uint8_t can_filter[] PROGMEM = 
 {
 	// Group 0
 	MCP2515_FILTER(0),				// Filter 0
