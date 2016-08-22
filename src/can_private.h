@@ -31,7 +31,7 @@
 #ifndef	CAN_PRIVATE_H
 #define	CAN_PRIVATE_H
 
-#include "config.h"
+#include "can.h"
 
 #ifndef	CAN_FORCE_TX_ORDER
 	#define	CAN_FORCE_TX_ORDER		0
